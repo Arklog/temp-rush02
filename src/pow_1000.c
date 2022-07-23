@@ -19,3 +19,30 @@ void	add_pow_1000(char *str)
 	narr[i] = str;
 	++pow_1000.size;
 }
+
+char	*get_pow_1000(t_size pow)
+{
+	if (pow > pow_1000.size)
+		return NULL;
+	else
+		return pow_1000.arr[pow - 1];
+}
+
+t_bool	is_pow_1000(char *ptr, t_size *ptr)
+{
+	t_size	i;
+	t_size	pow;
+
+	i = 0;
+	while (ptr[i] && (ptr[0] == '1' || ptr[i] == 0))
+	{
+		if (ptr[i++] == '0')
+			++pow;
+	}
+	if (pow % 3 == 0)
+	{
+		if (ptr)
+			*ptr = pow / 3;
+		return (1);
+	}
+}

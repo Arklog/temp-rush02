@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:42:03 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:04:56 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:09:33 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,15 @@ void	add_pow_1000(char *str);
  *			if no power is found return NULL
  */
 char	*get_pow_1000(t_size pow);
+
+/**
+ * Check if a given string is a power of 1000 in the dic format
+ *
+ * @param ptr The dic's line
+ * @param pow A ptr to store the power of 1000
+ *
+ * @return 1 if true, 0 else
+ */
+t_bool	is_pow_1000(char *ptr, t_size *pow);
 
 #endif
