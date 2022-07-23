@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:32:08 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:53:42 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 20:14:33 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,7 @@ static s_array	g_twenty_to_hundred = {.arr = NULL, .size = 0};
 
 void	add_twenty_to_hundred(char *str)
 {
-	char	**narr;
-	t_size	i;
-
-	narr = malloc(sizeof(char *) * (g_twenty_to_hundred.size + 1));
-	if (!narr)
-		return ;
-	i = 0;
-	while (i < g_twenty_to_hundred.size)
-	{
-		narr[i] = g_twenty_to_hundred.arr[i];
-		++i;
-	}
-	narr[i] = str;
-	if (g_twenty_to_hundred.size)
-		free(g_twenty_to_hundred.arr);
-	g_twenty_to_hundred.arr = narr;
-	++g_twenty_to_hundred.size;
+	s_array_add(&g_twenty_to_hundred, str);
 }
 
 char	*get_twenty_to_hundred(t_size i)
@@ -43,12 +27,20 @@ char	*get_twenty_to_hundred(t_size i)
 		return (NULL);
 }
 
-t_bool	is_twenty_to_hundred(char *ptr, t_size *index)
+t_bool	is_twenty_to_hundred(char *str)
 {
 	char	a;
+	char	b[2];
 
-	a = '0';
+	if (!ft_strncmp("100", str, 3))
+		return 1;
+	a = '1';
+	b[1] = '0';
 	while (a <= '9')
 	{
+		b[0] = a;
+		if (!ft_strncmp((char *)b, str, 2))
+			return 1;
 	}
+	return (0);
 }

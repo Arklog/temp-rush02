@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:49:17 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:50:03 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 22:01:49 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,7 @@
 # include "types.h"
 
 t_size	ft_strlen(char *str);
+
+int	ft_strncmp(char *s1, char *s2, t_size n);
 
 #endif

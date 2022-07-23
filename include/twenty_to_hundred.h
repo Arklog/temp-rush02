@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:52:12 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:52:13 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 20:08:17 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ char	*get_twenty_to_hundred(t_size index);
  *
  * @return 1 if true, 0 else
  */
-t_bool	is_twenty_to_hundred(char *ptr, t_size *index);
+t_bool	is_twenty_to_hundred(char str[3]);
 
 #endif
