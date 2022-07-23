@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:42:03 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:04:03 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:04:56 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void	add_pow_1000(char *str);
  *
  * @param pow The power of 1000
  *
- * @return the corresponding power of 1000 as a string (1 should return "thousand")
+ * @return the corresponding power of 1000 as a string (1 should return "thousand"),
+ *			if no power is found return NULL
  */
 char	*get_pow_1000(t_size pow);
 
