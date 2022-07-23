@@ -6,12 +6,13 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:42:03 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:09:33 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:42:28 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef POW_1000_H
 # define POW_1000_H
+# include <stdlib.h>
 # include  "types.h"
 
 /**
