@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:32:08 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:46:22 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:53:42 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ void	add_twenty_to_hundred(char *str)
 char	*get_twenty_to_hundred(t_size i)
 {
 	if (i < g_twenty_to_hundred.size)
-		return g_twenty_to_hundred.arr[i];
+		return (g_twenty_to_hundred.arr[i]);
 	else
-		return NULL;
+		return (NULL);
 }
 
 t_bool	is_twenty_to_hundred(char *ptr, t_size *index)

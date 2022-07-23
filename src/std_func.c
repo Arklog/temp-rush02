@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:50:33 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 18:51:19 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/23 18:53:58 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_size	ft_strlen(char *str)
 {
-	t_size i;
+	t_size	i;
 
 	i = 0;
 	while (str[i])
