@@ -14,5 +14,8 @@ void	add_pow_1000(char *str)
 	while (i < pow_1000.size)
 	{
 		narr[i] = pow_1000.arr[i];
+		++i;
 	}
+	narr[i] = str;
+	++pow_1000.size;
 }
