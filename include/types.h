@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:46:32 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 17:46:48 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 19:49:31 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,4 +35,5 @@ struct s_arrint {
 	t_bool	neg;
 	t_size	size;
 };
+
 #endif
