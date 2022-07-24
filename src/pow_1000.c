@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:41 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:24:46 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:32:33 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,6 @@ t_bool	is_pow_1000(char *ptr)
 			++pow;
 	}
 	if (pow % 3 == 0)
-	{
-		if (ptr)
-			*ptr = pow / 3;
 		return (TRUE);
-	}
 	return (FALSE);
 }

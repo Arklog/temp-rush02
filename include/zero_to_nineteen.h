@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 13:59:08 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 16:25:07 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:28:50 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@
 # include "include/std_func.h"
 
 void	add_zero_to_nineteen(char *ptr);
+
 char	*get_zero_to_nineteen(t_size index);
+
 t_bool	is_zero_to_nineteen(char *);
 
 #endif
