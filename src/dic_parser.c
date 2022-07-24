@@ -16,6 +16,7 @@ char	*extract_word(char *line)
 {
 	t_bool	br;
 	char	*ptr;
+	int		esp;
 
 	br = 0;
 	while (is_digit(*line))
@@ -23,8 +24,21 @@ char	*extract_word(char *line)
 	while (*line == ' ' || (*line == ':' && !br))
 		if (*(line++) == ':')
 			br = !br;
+	esp = 0;
 	while (*line != '\n')
-		ft_append(&ptr, *(line++));
+	{
+		if (*line > 32 && *line < 127)
+		{
+			ft_append(&ptr, *line);
+			esp = 0;
+		}
+		if (line[i] == ' ' && esp == 0)
+		{
+			ft_append(&ptr, *line);
+			esp = 1;
+		}
+		line++;
+	}
 	return ptr;
 }
 
