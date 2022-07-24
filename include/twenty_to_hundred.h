@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:52:12 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 04:03:18 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:51:24 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ char	*get_twenty_to_hundred(t_size index);
  * Check if a line from the dic correspond to a multiple of 10 between
  * 20 and 100
  *
- * @param str the line to check
- * @param index a place to store the index, or NULL
+ * @param str The line to check
+ * @param index A place to store the index, or NULL
  *
  * @return 1 if true, 0 else
  */

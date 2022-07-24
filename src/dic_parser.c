@@ -21,7 +21,7 @@ char	*extract_word(char *line)
 	while (is_digit(*line))
 		++line;
 	while (*line == ' ' || (*line == ':' && !br))
-		if (*line == ':')
+		if (*(line++) == ':')
 			br = !br;
 	while (*line != '\n')
 		ft_append(&ptr, *(line++));

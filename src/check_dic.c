@@ -45,6 +45,7 @@ int	read_line(int f, char *line)
 		return (0);
 	return (1);
 }
+
 int	check_dic(char *fname)
 {
 	int	f;

@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:04:42 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:13:45 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:56:24 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,18 @@ char	*get_zero_to_nineteen(t_size index)
 	return g_zero_to_nineteen->arr[index];
 }
 
-t_bool	is_zero_to_nineteen(char *src)
+t_bool	is_zero_to_nineteen(char *line)
 {
 	char	tmp[3];
+	t_size	i;
 
-	if (ft_strlen(src) > 2)
-		if (src[2] != ' ')
-			return (FALSE);
+	i = 0;
+	while (is_digit(line[i]))
+		++i;
+	if (i > 2)
+		return (FALSE);
 	ft_memset(ptr, 0, 3);
-	ft_memcpy(ptr, src, 2);
+	ft_memcpy(ptr, line, 2);
 	if (ft_atoi(tmp) > 0 && ft_atoi(tmp) < 20)
 		return (TRUE);
 }

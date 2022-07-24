@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:53:06 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:26:11 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:31:40 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,13 @@ char	*extract_word(char *line);
  * @param line The line to add
  */
 void	add_line(char *line);
+
+/**
+ * Translate an int between 0 and 999 to a string
+ *
+ * @param tmp the integer
+ * @param pow the power of the integer
+ */
+void	translate(int tmp, t_size pow);
 
 #endif
