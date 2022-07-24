@@ -55,4 +55,6 @@ void	 add_line(char *line)
 		add_twenty_to_hundred(tmp.word);
 	else if (is_pow_1000(line))
 		add_pow_1000(tmp.word);
+	free(line);
+	free(tmp.number);
 }

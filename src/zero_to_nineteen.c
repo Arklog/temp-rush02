@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:04:42 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 17:42:50 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 21:09:09 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ char	*get_zero_to_nineteen(t_size index)
 
 t_bool	is_zero_to_nineteen(char *line)
 {
-	char	tmp[3];
 	t_size	i;
 
 	i = 0;
@@ -34,9 +33,7 @@ t_bool	is_zero_to_nineteen(char *line)
 		++i;
 	if (i > 2)
 		return (FALSE);
-	ft_memset(tmp, 0, sizeof(char) * 3);
-	ft_memcpy(tmp, line, sizeof(char) * 2);
-	if (ft_atoi(tmp, 2) > 0 && ft_atoi(tmp, 2) < 20)
+	if (ft_atoi(line, 2) > 0 && ft_atoi(line, 2) < 20)
 		return (TRUE);
 	else
 		return (FALSE);

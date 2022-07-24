@@ -39,7 +39,7 @@ int	read_line(int f, char **line)
 	while (c != '\n' && n > 0)
 	{
 		ft_append(line, c);
-		//printf("index[%d] : %c\nc: %c\n", i, (*line)[i], c);
+		printf("index[%d] : %c\nc: %c\n", i, (*line)[i], c);
 		i++;
 		n = read(f, &c, 1);
 	}
@@ -54,7 +54,6 @@ int	check_dic(char *fname)
 	int	f;
 	int	n;
 	char *line;
-	char	c;
 
 	f = open(fname, O_RDONLY);
 	if (f < 0)
