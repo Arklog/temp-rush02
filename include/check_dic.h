@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 00:07:22 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 02:32:48 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 18:53:53 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
  *
  * @return 1 if read successful, 0 else
  */
-int	read_line(int f, char *line);
+int	read_line(int f, char **line);
 
 /**
  * Check if a line from the dic is valid

@@ -1,4 +1,5 @@
 #include "include/check_dic.h"
+#include "include/std_func.h"
 
 int	check_line(char *line)
 {
@@ -25,7 +26,7 @@ int	check_line(char *line)
 	return (1);
 }
 
-int	read_line(int f, char *line)
+int	read_line(int f, char **line)
 {
 	char	c;
 	int	n;
@@ -33,17 +34,18 @@ int	read_line(int f, char *line)
 	
 	i = 0;
 	n = read(f, &c, 1);
+	if (!n)
+		return (0);
 	while (c != '\n' && n > 0)
 	{
-		line[i] = c;
-		printf("index[%d] : %c\nc: %c\n", i, line[i], c);
+		ft_append(line, c);
+		//printf("index[%d] : %c\nc: %c\n", i, (*line)[i], c);
 		i++;
 		n = read(f, &c, 1);
 	}
-	line[i] = '\0';
-	printf("ligne: %s\n", line);
-	if (!check_line(line))
-		return (0);
+	(*line)[i] = '\0';
+	if (!check_line(*line))
+		return (-1);
 	return (1);
 }
 
@@ -51,7 +53,7 @@ int	check_dic(char *fname)
 {
 	int	f;
 	int	n;
-	char	line[1024];
+	char *line;
 	char	c;
 
 	f = open(fname, O_RDONLY);
@@ -60,14 +62,14 @@ int	check_dic(char *fname)
 		ft_putstr("could not open dic\n");
 		return (0);
 	}
-	n = read(f, &c, 1);
-	while (n > 0)
+	line = NULL;
+	while ((n = read_line(f, &line)))
 	{
-		if (read_line(f, line))
+		if (line)
 			add_line(line);
-		else
+		else if (n == -1)
 			return (0);
-		n = read(f, &c, 1);
+		line = NULL;
 	}
 	return (1);
 }
