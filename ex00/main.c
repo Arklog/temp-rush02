@@ -6,12 +6,14 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 22:45:06 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 22:56:16 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 23:03:10 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "include/check_dic.h"
+
 void	translate(int tmp, t_size pow);
+
 int	main(int argc, char **argv)
 {
 	struct s_arrint *i;
