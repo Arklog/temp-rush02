@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:41 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 04:00:55 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:24:46 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ t_bool	is_pow_1000(char *ptr)
 	t_size	pow;
 
 	i = 0;
+	if (ft_strlen(ptr) < 4)
+		return (FALSE);
 	while (ptr[i] && (ptr[0] == '1' || ptr[i] == '0'))
 	{
 		if (ptr[i++] == '0')

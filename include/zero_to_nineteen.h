@@ -1,37 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   types.h                                            :+:      :+:    :+:   */
+/*   zero_to_nineteen.h                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/23 17:46:32 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:16:19 by pducloux         ###   ########.fr       */
+/*   Created: 2022/07/24 13:59:08 by pducloux          #+#    #+#             */
+/*   Updated: 2022/07/24 14:05:57 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TYPES_H
-# define TYPES_H
-# define TRUE	1
-# define FALSE	0
-# include <stdlib.h>
+#ifndef ZERO_TO_NINETEEN_H
+# define ZERO_TO_NINETEEN_H
+# include "include/types.h"
 
-typedef unsigned int	t_size;
-
-typedef unsigned char	t_bool;
-
-struct s_dic_line {
-	char	*number;
-	char	*word;
-};
-
-struct s_array {
-	char	**arr;
-	t_size	size;
-};
-
-void	s_array_add(struct s_array *arr, char *str);
-
-void	s_array_secure_free(struct s_array arr);
+void	add_zero_to_nineteen(char *ptr);
+char	*get_zero_to_nineteen(t_size index);
+t_bool	is_zero_to_nineteen(char *);
 
 #endif

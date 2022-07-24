@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:53:06 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 03:55:59 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 14:26:11 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 # define DIC_PARSER_H
 # include "include/types.h"
 # include "include/std_func.h"
+# include "include/zero_to_nineteen.h"
+# include "include/twenty_to_hundred.h"
+# include "include/pow_1000.h"
 
 /**
  * Extract the number from a dic's line
@@ -33,8 +36,11 @@ char	*extract_number(char *line);
  */
 char	*extract_word(char *line);
 
-struct s_dic_line	parse_line(char *line);
-
+/**
+ * Add a line to the list of lines
+ *
+ * @param line The line to add
+ */
 void	add_line(char *line);
 
 #endif

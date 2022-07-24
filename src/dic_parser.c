@@ -27,3 +27,17 @@ char	*extract_word(char *line)
 		ft_append(&ptr, *(line++));
 	return ptr;
 }
+
+void	 add_line(char *line)
+{
+	struct s_dic_line tmp;
+
+	tmp.number = extract_number(line);
+	tmp.word = extract_word(line);
+	if (is_zero_to_nineteen(line))
+		add_zero_to_nineteen(tmp.word);
+	else if (is_twenty_to_hundred(line))
+		add_twenty_to_hundred(tmp.word);
+	else if (is_pow_1000(line))
+		add_pow_1000(tmp.word);
+}
