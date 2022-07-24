@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:46:32 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 16:48:19 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:46:48 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # define TRUE	1
 # define FALSE	0
 # include <stdlib.h>
-# include "include/std_func.h"
 
 typedef unsigned int	t_size;
 
@@ -31,19 +30,9 @@ struct s_array {
 	t_size	size;
 };
 
-/**
- * Add an element to the array, securely allocating and freeing memory
- *
- * @param arr The structure in which the data should be added
- * @param str The string to add
- */
-void	s_array_add(struct s_array *arr, char *str);
-
-/**
- * Securely free memory from s_array structure
- *
- * @param arr The structure from which memory should be freed
- */
-void	s_array_secure_free(struct s_array arr);
-
+struct s_arrint {
+	int	*arr;
+	t_bool	neg;
+	t_size	size;
+};
 #endif

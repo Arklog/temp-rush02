@@ -36,11 +36,12 @@ int	read_line(int f, char *line)
 	while (c != '\n' && n > 0)
 	{
 		line[i] = c;
-		printf("ligne[%d] : %c\nc: %c\n", i, line[i], c);
+		printf("index[%d] : %c\nc: %c\n", i, line[i], c);
 		i++;
 		n = read(f, &c, 1);
 	}
 	line[i] = '\0';
+	printf("ligne: %s\n", line);
 	if (!check_line(line))
 		return (0);
 	return (1);
@@ -55,7 +56,10 @@ int	check_dic(char *fname)
 
 	f = open(fname, O_RDONLY);
 	if (f < 0)
+	{
+		ft_putstr("could not open dic\n");
 		return (0);
+	}
 	n = read(f, &c, 1);
 	while (n > 0)
 	{

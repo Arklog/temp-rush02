@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:53:06 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:31:40 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:49:06 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,6 @@ void	add_line(char *line);
  * @param pow the power of the integer
  */
 void	translate(int tmp, t_size pow);
+
 
 #endif

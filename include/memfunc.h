@@ -21,4 +21,19 @@ void	ft_memset(void *ptr, char val, t_size nbytes);
  */
 void	ft_memcpy(void *dest, void *src, t_size len);
 
+/**
+ * Add an element to the array, securely allocating and freeing memory
+ *
+ * @param arr The structure in which the data should be added
+ * @param str The string to add
+ */
+void	s_array_add(struct s_array *arr, char *str);
+
+/**
+ * Securely free memory from s_array structure
+ *
+ * @param arr The structure from which memory should be freed
+ */
+void	s_array_secure_free(struct s_array arr);
+
 #endif

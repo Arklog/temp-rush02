@@ -1,3 +1,5 @@
+#include "include/types.h"
+
 int	ft_atoi(char *str, int size)
 {
 	int	i;

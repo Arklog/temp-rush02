@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:50:33 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 03:57:29 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:03:53 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,8 @@ void	ft_append(char **ptr, char a)
 	nptr = malloc(sizeof(char) * (len + 1));
 	if (!nptr)
 		return ;
-	ft_memset(nptr, 0, len + 1);
-	ft_memcpy(nptr, *ptr, len);
+	ft_memset(nptr, 0, sizeof(char) * (len + 1));
+	ft_memcpy(nptr, *ptr, sizeof(char) * len);
 	nptr[len - 1] = a;
 	if (*ptr)
 		free(*ptr);

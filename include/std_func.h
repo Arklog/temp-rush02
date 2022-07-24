@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:49:17 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 04:04:58 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 17:53:30 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,9 @@ t_bool	is_digit(char a);
 t_bool	is_printable(char a);
 
 void	ft_append(char **ptr, char val);
+
+int	ft_atoi(char *str, int size);
+
+void	ft_putstr(char *str);
 
 #endif
