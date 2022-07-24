@@ -66,10 +66,12 @@ int	check_dic(char *fname)
 	while ((n = read_line(f, &line)))
 	{
 		if (line)
+		{
 			add_line(line);
+			line = NULL;
+		}
 		else if (n == -1)
 			return (0);
-		line = NULL;
 	}
 	return (1);
 }
