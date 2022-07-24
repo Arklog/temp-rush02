@@ -1,20 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   types.c                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/24 16:46:03 by pducloux          #+#    #+#             */
+/*   Updated: 2022/07/24 16:49:07 by pducloux         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "include/types.h"
 
 void	s_array_add(struct s_array *arr, char *str)
 {
 	char	**narr;
-	t_size	i;
 
 	narr = malloc(sizeof(char *) * (arr->size + 1));
 	if (!narr)
 		return ;
-	i = 0;
-	while (i < arr->size)
-	{
-		narr[i] = arr->arr[i];
-		++i;
-	}
-	narr[i] = str;
+	ft_memcpy(narr, arr->arr, arr->size);
+	narr[len] = str;
 	s_array_secure_free(*arr);
 	arr->arr = narr;
 	arr->size++;

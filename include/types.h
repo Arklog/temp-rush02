@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:46:32 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 16:23:22 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:48:19 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define TRUE	1
 # define FALSE	0
 # include <stdlib.h>
+# include "include/std_func.h"
 
 typedef unsigned int	t_size;
 
