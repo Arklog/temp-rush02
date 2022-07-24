@@ -2,25 +2,20 @@
 void	translate(int tmp, t_size pow);
 int	main(int argc, char **argv)
 {
-	argc = argc - 1;
-	int a = atoi(argv[1]);
-	t_size b  = atoi(argv[2]);
-	printf("%d %d\n", a, b);
-    translate(a, b);
-	/*if (argc == 2)
-	{
-		if (check_dic("numbers.dict") != 0)
-		{
-			
-		}
-	}
-	if (argc == 3)
-	{
-		if (check_dic(argv[1]) != 0)
-		{
-			
-		}
-	}*/
-	write(1, "Dict Error\n", 11);
+	struct s_arrint *i;
+	t_size	len;
+
+	if (argc < 2)
+		return (1);
+	else if (argc == 2)
+		if (!check_dic("numbers.dict.txt"))
+			ft_putstr("Dict error\n");
+	else if (argc == 3)
+		if (!check_dic(argv[2]))
+			ft_putstr("Dict error\n");
+	len = 0;
+	i = put_in_tab(argv[1]);
+	while (len < i->size)
+		translate(i->arr[len], len);
 	return (0);
 }
