@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:32:08 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 16:38:59 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 20:42:38 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ t_bool	is_twenty_to_hundred(char *str)
 		b[0] = a;
 		if (!ft_strncmp((char *)b, str, 2))
 			return (TRUE);
+		++a;
 	}
 	return (FALSE);
 }

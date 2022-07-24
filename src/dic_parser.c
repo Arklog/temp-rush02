@@ -24,15 +24,16 @@ char	*extract_word(char *line)
 	while (*line == ' ' || (*line == ':' && !br))
 		if (*(line++) == ':')
 			br = !br;
+	ptr = NULL;
 	esp = 0;
-	while (*line != '\n')
+	while (*line != '\0')
 	{
 		if (*line > 32 && *line < 127)
 		{
 			ft_append(&ptr, *line);
 			esp = 0;
 		}
-		if (line[i] == ' ' && esp == 0)
+		if (*line == ' ' && esp == 0)
 		{
 			ft_append(&ptr, *line);
 			esp = 1;
@@ -54,5 +55,4 @@ void	 add_line(char *line)
 		add_twenty_to_hundred(tmp.word);
 	else if (is_pow_1000(line))
 		add_pow_1000(tmp.word);
-	free(line);
 }

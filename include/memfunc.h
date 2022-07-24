@@ -33,7 +33,8 @@ void	s_array_add(struct s_array *arr, char *str);
  * Securely free memory from s_array structure
  *
  * @param arr The structure from which memory should be freed
+ * @param all If set to true, free all substrings
  */
-void	s_array_secure_free(struct s_array arr);
+void	s_array_secure_free(struct s_array arr, t_bool all);
 
 #endif
