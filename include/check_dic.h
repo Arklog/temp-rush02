@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 00:07:22 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 22:38:35 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:42:09 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ int	check_line(char *line);
  */
 int	check_dic(char *fname);
 
-struct s_array	*put_in_tab(char *line);
+struct s_arrint	*put_in_tab(char *line);
 
 #endif

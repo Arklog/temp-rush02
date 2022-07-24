@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:41 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 22:09:22 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:48:35 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,12 @@ void	add_pow_1000(char *str)
 
 char	*get_pow_1000(t_size pow)
 {
+	if (!pow)
+		return "";
 	if (pow >= g_pow_1000.size)
 		return (NULL);
 	else
-		return (g_pow_1000.arr[pow]);
+		return (g_pow_1000.arr[pow - 1]);
 }
 
 t_bool	is_pow_1000(char *ptr)
