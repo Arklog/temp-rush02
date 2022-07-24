@@ -6,14 +6,15 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:52:12 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 20:08:17 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 04:03:18 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef TWENTY_TO_HUNDRED_H
 # define TWENTY_TO_HUNDRED_H
 # include <stdlib.h>
-# include "types.h"
+# include "include/types.h"
+# include "include/std_func.h"
 
 /**
  * Append a string to the list of multiples of 10 between 20 and 100

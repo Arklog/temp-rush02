@@ -1,4 +1,4 @@
-//#include "header.h"
+#include "include/check_dic.h"
 
 int	check_line(char *line)
 {
@@ -45,8 +45,7 @@ int	read_line(int f, char *line)
 		return (0);
 	return (1);
 }
-//en commentaire en attendant add_line
-/*int	check_dic(char *fname)
+int	check_dic(char *fname)
 {
 	int	f;
 	int	n;
@@ -66,4 +65,4 @@ int	read_line(int f, char *line)
 		n = read(f, &c, 1);
 	}
 	return (1);
-}*/
+}

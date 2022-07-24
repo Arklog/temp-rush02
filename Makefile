@@ -1,17 +1,16 @@
-CC	= gcc
+SRCS	= main.c $(wildcard src/*.c)
+OBJS	= ${SRCS:.c=.o}
 
+CC	= gcc
 CFLAGS	= -Wall -Wextra -Werror
+INCLUDE	= -I.
 
 RM	= rm -f
-
-SRCS	= main.c fct.c
-
-OBJS	= ${SRCS:.c=.o}
 
 NAME	= rush-02
 
 .c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+	${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
 
 all:	${OBJS}
 	${CC} -o ${NAME} ${OBJS}

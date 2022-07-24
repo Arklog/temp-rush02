@@ -6,13 +6,13 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:32:08 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 20:14:33 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 04:02:52 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "twenty_to_hundred.h"
+#include "include/twenty_to_hundred.h"
 
-static s_array	g_twenty_to_hundred = {.arr = NULL, .size = 0};
+static struct s_array	g_twenty_to_hundred = {.arr = NULL, .size = 0};
 
 void	add_twenty_to_hundred(char *str)
 {

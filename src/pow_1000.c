@@ -6,13 +6,13 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:41 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 20:15:00 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 04:00:55 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "pow_1000.h"
+#include "include/pow_1000.h"
 
-static s_array	g_pow_1000 = {.arr = NULL, .size = 0};
+static struct s_array	g_pow_1000 = {.arr = NULL, .size = 0};
 
 void	add_pow_1000(char *str)
 {
@@ -42,6 +42,7 @@ t_bool	is_pow_1000(char *ptr)
 	{
 		if (ptr)
 			*ptr = pow / 3;
-		return (1);
+		return (TRUE);
 	}
+	return (FALSE);
 }

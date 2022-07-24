@@ -1,4 +1,4 @@
-#include "types.h"
+#include "include/types.h"
 
 void	s_array_add(struct s_array *arr, char *str)
 {

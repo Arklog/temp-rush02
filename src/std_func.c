@@ -6,11 +6,11 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:50:33 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/23 20:12:13 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 03:57:29 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "std_func.h"
+#include "include/std_func.h"
 
 t_size	ft_strlen(char *str)
 {
@@ -30,4 +30,39 @@ int	ft_strncmp(char *s1, char *s2, t_size n)
 	while (s1[i] && s2[i] && s1[i] == s2[i] && i < n -1)
 		++i;
 	return (s1[i] - s2[i]);
+}
+
+t_bool	is_digit(char a)
+{
+	return (a >= '0' && a <= '9');
+}
+
+t_bool	is_printable(char a)
+{
+	return (a >= 32 && a <= 126);
+}
+
+void	ft_append(char **ptr, char a)
+{
+	char	*nptr;
+	t_size	len;
+
+	if (*ptr)
+		len = ft_strlen(*ptr);
+	else
+	{
+		*ptr = malloc(sizeof(char) * 2);
+		*(ptr)[0] = a;
+		*(ptr)[1] = 0;
+		return ;
+	}
+	nptr = malloc(sizeof(char) * (len + 1));
+	if (!nptr)
+		return ;
+	ft_memset(nptr, 0, len + 1);
+	ft_memcpy(nptr, *ptr, len);
+	nptr[len - 1] = a;
+	if (*ptr)
+		free(*ptr);
+	*ptr = nptr;
 }
