@@ -6,14 +6,15 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 17:42:03 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 02:33:12 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:15:25 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef POW_1000_H
 # define POW_1000_H
 # include <stdlib.h>
-# include  "include/types.h"
+# include "include/types.h"
+# include "include/std_func.h"
 
 /**
  * Add a string to the list of power of 1000

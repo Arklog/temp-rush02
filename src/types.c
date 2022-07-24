@@ -25,8 +25,8 @@ void	s_array_secure_free(struct s_array arr)
 	t_size	i;
 
 	i = 0;
-	while (i < arr->size)
-		free(arr->arr[i]);
-	if (arr->arr)
-		free(arr->arr);
+	while (i < arr.size)
+		free(arr.arr[i]);
+	if (arr.arr)
+		free(arr.arr);
 }

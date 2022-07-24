@@ -6,9 +6,11 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:04:42 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 14:58:34 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 16:24:35 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+# include "include/zero_to_nineteen.h"
 
 static struct s_array	g_zero_to_nineteen = {.arr = NULL, .size = 0};
 
@@ -19,7 +21,7 @@ void	add_zero_to_nineteen(char *ptr)
 
 char	*get_zero_to_nineteen(t_size index)
 {
-	return g_zero_to_nineteen->arr[index];
+	return g_zero_to_nineteen.arr[index];
 }
 
 t_bool	is_zero_to_nineteen(char *line)
