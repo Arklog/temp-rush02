@@ -63,11 +63,14 @@ void	 add_line(char *line)
 void	putstr(char *str)
 {
 	int	i;
+	static int space = 0;
 
-	write(1, " ", 1);
+	if (space)
+		write(1, " ", 1);
 	i = 0;
 	while (str[i])
 		write(1, &str[i++], 1);
+	space = 1;
 }
 
 void	translate(int tmp, t_size pow)

@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 22:45:06 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 22:45:07 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:56:16 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	main(int argc, char **argv)
 	i = put_in_tab(argv[1]);
 	while (len < i->size)
 	{
-		translate(i->arr[len], len);
+		translate(i->arr[len], i->size - len - 1);
 		++len;
 	}
 	return (0);
