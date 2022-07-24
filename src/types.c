@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 16:46:03 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 20:39:52 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:12:03 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	s_array_secure_free(struct s_array arr, t_bool all)
 	if (!arr.arr)
 		return ;
 	while (i < arr.size && all)
+		if (arr.arr[i])
 			free(arr.arr[i]);
 	if (arr.arr)
 		free(arr.arr);

@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 14:04:42 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 21:09:09 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:09:08 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,10 @@ void	add_zero_to_nineteen(char *ptr)
 
 char	*get_zero_to_nineteen(t_size index)
 {
-	return g_zero_to_nineteen.arr[index];
+	if (index >= g_zero_to_nineteen.size)
+		return (NULL);
+	else
+		return g_zero_to_nineteen.arr[index];
 }
 
 t_bool	is_zero_to_nineteen(char *line)
@@ -33,8 +36,13 @@ t_bool	is_zero_to_nineteen(char *line)
 		++i;
 	if (i > 2)
 		return (FALSE);
-	if (ft_atoi(line, 2) > 0 && ft_atoi(line, 2) < 20)
+	if (ft_atoi(line, 2) >= 0 && ft_atoi(line, 2) < 20)
 		return (TRUE);
 	else
 		return (FALSE);
+}
+
+void	free_zero_to_nineteen()
+{
+	s_array_secure_free(g_zero_to_nineteen, 1);
 }

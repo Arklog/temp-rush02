@@ -1,4 +1,5 @@
 #include "include/dic_parser.h"
+#include <unistd.h>
 
 char	*extract_number(char *line)
 {

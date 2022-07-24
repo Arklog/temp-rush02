@@ -6,7 +6,7 @@
 /*   By: pducloux <pducloux@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/23 18:14:41 by pducloux          #+#    #+#             */
-/*   Updated: 2022/07/24 16:32:33 by pducloux         ###   ########.fr       */
+/*   Updated: 2022/07/24 22:09:22 by pducloux         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	add_pow_1000(char *str)
 
 char	*get_pow_1000(t_size pow)
 {
-	if (pow > g_pow_1000.size)
+	if (pow >= g_pow_1000.size)
 		return (NULL);
 	else
-		return (g_pow_1000.arr[pow - 1]);
+		return (g_pow_1000.arr[pow]);
 }
 
 t_bool	is_pow_1000(char *ptr)
@@ -33,6 +33,7 @@ t_bool	is_pow_1000(char *ptr)
 	t_size	pow;
 
 	i = 0;
+	pow = 0;
 	if (ft_strlen(ptr) < 4)
 		return (FALSE);
 	while (ptr[i] && (ptr[0] == '1' || ptr[i] == '0'))
@@ -43,4 +44,9 @@ t_bool	is_pow_1000(char *ptr)
 	if (pow % 3 == 0)
 		return (TRUE);
 	return (FALSE);
+}
+
+void	free_pow_1000()
+{
+	s_array_secure_free(g_pow_1000, 1);
 }

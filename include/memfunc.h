@@ -37,4 +37,6 @@ void	s_array_add(struct s_array *arr, char *str);
  */
 void	s_array_secure_free(struct s_array arr, t_bool all);
 
+void	s_array_free_all();
+
 #endif
