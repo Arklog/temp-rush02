@@ -56,3 +56,30 @@ void	 add_line(char *line)
 	else if (is_pow_1000(line))
 		add_pow_1000(tmp.word);
 }
+
+void	putstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i++])
+		write(1, &str[i], 1);
+	write(1, " ", 1);
+}
+
+void	translate(int tmp, t_size pow)
+{
+	if (tmp == 100)
+		putstr(get_twenty_to_hundred(100 / 10 - 2));
+	else if (tmp / 100 > 0)
+	{
+		putstr(get_zero_to_nineteen(tmp / 100));
+		putstr(get_twenty_to_hundred(100 / 10 - 2));
+	}
+	if (tmp % 100 >= 20)
+		putstr(get_twenty_to_hundred((tmp % 100) / 10 - 2));
+	else if (tmp % 100 < 20)
+		putstr(get_zero_to_nineteen(tmp % 100));
+	if (get_pow_1000(pow))
+		putstr(get_pow_1000(pow));
+}
